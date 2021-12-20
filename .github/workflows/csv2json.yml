@@ -9,7 +9,6 @@ on:
   workflow_dispatch:
     inputs:
       date:
-        description: 'date'
         required: true
 jobs:
   update_data:
