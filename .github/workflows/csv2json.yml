@@ -5,7 +5,7 @@ env:
   TZ: Asia/Tokyo
 on:
   schedule:
-    - cron:  '25 13 * * *'
+    - cron:  '30 13 * * *'
 jobs:
   update_data:
     runs-on: ubuntu-latest
