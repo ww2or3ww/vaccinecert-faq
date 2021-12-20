@@ -5,11 +5,8 @@ env:
   TZ: Asia/Tokyo
 on:
   schedule:
-    - cron:  '30 13 * * *'
+    - cron:  '00 */3 * * *'
   workflow_dispatch:
-    inputs:
-      date:
-        required: true
 jobs:
   update_data:
     runs-on: ubuntu-latest
