@@ -6,6 +6,11 @@ env:
 on:
   schedule:
     - cron:  '30 13 * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'date'
+        required: true
 jobs:
   update_data:
     runs-on: ubuntu-latest
