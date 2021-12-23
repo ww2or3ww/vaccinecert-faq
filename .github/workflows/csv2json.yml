@@ -5,7 +5,7 @@ env:
   TZ: Asia/Tokyo
 on:
   schedule:
-    - cron:  '00 */3 * * *'
+    - cron:  '00 0 * * *'
   workflow_dispatch:
 jobs:
   update_data:
@@ -29,7 +29,7 @@ jobs:
       - name: Create Pull Request main
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{ secrets.TOKEN_GITHUB }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           path: production
           commit-message: BOT; UPDATE DATA
           title: BOT; UPDATE DATA to main
