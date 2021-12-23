@@ -11,7 +11,7 @@ import logging
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-CSV_ADDRESS = 'https://cio.go.jp/sites/default/files/uploads/documents/VaccinecertFAQaa.csv'
+CSV_ADDRESS = 'https://cio.go.jp/sites/default/files/uploads/documents/VaccinecertFAQ.csv'
 
 @retry(tries=3, delay=1)
 def get_csv_data(csv_address):
