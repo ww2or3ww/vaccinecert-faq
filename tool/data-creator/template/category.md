@@ -2,7 +2,7 @@
 title: "{{category}}"
 draft: false
 type : "docs"
-weight : {{category-no}}
+weight : {{category-no-num}}
 url: "/categories/{{category-no}}/"
 ---
 

@@ -38,6 +38,7 @@ def create_category_md(content_dir_path, category_template, item):
     text = category_template
     text = text.replace('{{category}}', item['カテゴリ名'])
     text = text.replace('{{category-no}}', item['カテゴリNo'])
+    text = text.replace('{{category-no-num}}', str(int(item['カテゴリNo'])))
     write_file(target_category_md_path, text)
 
 def create_faq_md(content_dir_path, faq_template, item):
