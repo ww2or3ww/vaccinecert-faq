@@ -13,9 +13,12 @@
       {{ if eq (len $faq.更新日) 8 }}
         最終更新日：{{ slicestr $faq.更新日 0 4 }}年{{ slicestr $faq.更新日 4 6 | strings.TrimLeft "0" }}月{{ slicestr $faq.更新日 6 | strings.TrimLeft "0" }}日&nbsp;
       {{ end}}
-      <br/>
-      <br/>
     </div>
+    <br/>
+    <div class="card-footer rounded-0 bg-white border p-0 border-0" style="text-align: right; margin-bottom: 0px; margin-right: 24px;">
+        <a href="/faq/{{ $faq.No }}" style="color: {{$.Site.Params.primary_color}};">>></a>
+    </div>
+    <br/>
   </div>
   {{ .Inner }}
 </div>
