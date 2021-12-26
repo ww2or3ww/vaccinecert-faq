@@ -6,13 +6,6 @@ import shutil
 import logging
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
-_consoleHandler = logging.StreamHandler(sys.stdout)
-_consoleHandler.setLevel(logging.INFO)
-_simpleFormatter = logging.Formatter(
-    fmt='%(levelname)-5s %(funcName)-20s %(lineno)4s: %(message)s'
-)
-_consoleHandler.setFormatter(_simpleFormatter)
-logger.addHandler(_consoleHandler)
 
 def main():
     try:
