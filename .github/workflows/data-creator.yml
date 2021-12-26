@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: feature/9_68_category_contents
+          ref: main
           path: production
 
       - name: Setup python
@@ -35,6 +35,6 @@ jobs:
           path: production
           commit-message: BOT; UPDATE DATA
           title: BOT; UPDATE DATA to main
-          base: feature/9_68_category_contents
-          branch: data-bot/feature/9_68_category_contents
+          base: main
+          branch: data-bot/main
           labels: auto_merge
