@@ -11,7 +11,7 @@ jobs:
   update_data:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
         with:
           ref: main
           path: production
