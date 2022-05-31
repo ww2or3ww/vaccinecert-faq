@@ -16,10 +16,12 @@ jobs:
           ref: main
           path: production
 
-      - id: createBranch
+      - name: git config
         run: |
+          cd production
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          cd ../
         
       - name: Setup python
         uses: actions/setup-python@v2
