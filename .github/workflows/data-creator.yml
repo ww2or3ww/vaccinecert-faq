@@ -11,15 +11,15 @@ jobs:
   update_data:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
         with:
           ref: main
           path: production
 
-      - name: git config
+      - id: createBranch
         run: |
-          git config --local user.name github-actions[bot]
-          git config --local user.email github-actions[bot]@users.noreply.github.com
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
         
       - name: Setup python
         uses: actions/setup-python@v2
